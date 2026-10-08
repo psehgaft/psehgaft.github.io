@@ -1,9 +1,51 @@
 'use strict';
-// Navigation commands are local shortcuts, never executable shell commands.
-const themeButton=document.querySelector('#theme');
-function setTheme(value){const expedition=value==='expedition';document.documentElement.dataset.theme=expedition?'expedition':'hacker';themeButton.setAttribute('aria-pressed',String(expedition));themeButton.setAttribute('aria-label',expedition?'Cambiar a estilo hacker':'Cambiar a estilo expedición');themeButton.querySelector('span').textContent=expedition?'Hacker':'Expedición';}
-try{setTheme(localStorage.getItem('portfolio-theme'));}catch{setTheme('hacker');}
-themeButton.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='hacker'?'expedition':'hacker';setTheme(next);try{localStorage.setItem('portfolio-theme',next);}catch{}});
+// Motion is optional, accessible, and independent from the visible page content.
+const motionButton=document.querySelector('#theme');
+const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+let motionPreference=true;
+try{motionPreference=localStorage.getItem('portfolio-motion')!=='off';}catch{}
+function syncMotion(){
+ const enabled=motionPreference&&!reducedMotion.matches;
+ document.documentElement.dataset.motion=enabled?'on':'off';
+ motionButton.setAttribute('aria-pressed',String(enabled));
+ motionButton.setAttribute('aria-label',enabled?'Pausar movimiento':'Activar movimiento');
+ motionButton.querySelector('span').textContent=enabled?'Pausar movimiento':'Activar movimiento';
+}
+syncMotion();
+motionButton.addEventListener('click',()=>{
+ motionPreference=!motionPreference;syncMotion();
+ try{localStorage.setItem('portfolio-motion',motionPreference?'on':'off');}catch{}
+});
+reducedMotion.addEventListener('change',syncMotion);
+const progress=document.querySelector('.scroll-progress');
+let scrollFrame=0;
+function updateProgress(){
+ const total=document.documentElement.scrollHeight-innerHeight;
+ progress.style.transform='scaleX('+(total>0?Math.min(1,Math.max(0,scrollY/total)):0)+')';
+ scrollFrame=0;
+}
+addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame(updateProgress);},{passive:true});
+addEventListener('resize',updateProgress);
+updateProgress();
+if('IntersectionObserver' in window){
+ const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){
+   if(document.documentElement.dataset.motion==='on')entry.target.classList.add('reveal-visible');
+   revealObserver.unobserve(entry.target);
+  }});
+ },{threshold:.12});
+ document.querySelectorAll('.section-heading,.feature-card,.terminal,.explore-grid,.mention-grid,.social-grid').forEach(element=>revealObserver.observe(element));
+ const navigationLinks=[...document.querySelectorAll('nav a[href^="#"]')];
+ const navObserver=new IntersectionObserver(entries=>{
+  const visible=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
+  if(!visible.length)return;
+  navigationLinks.forEach(link=>{
+   if(link.getAttribute('href')==='#'+visible[0].target.id)link.setAttribute('aria-current','true');
+   else link.removeAttribute('aria-current');
+  });
+ },{rootMargin:'-20% 0px -55% 0px',threshold:0});
+ navigationLinks.forEach(link=>{const section=document.querySelector(link.getAttribute('href'));if(section)navObserver.observe(section);});
+}
 const output=document.querySelector('#terminal-output');
 const shortcuts={proyectos:'proyectos',projects:'proyectos',redes:'conectar',socials:'conectar',charlas:'charlas',talks:'charlas',explorar:'explorar',travel:'explorar'};
 document.querySelector('#terminal-form').addEventListener('submit',event=>{event.preventDefault();const field=document.querySelector('#command');const raw=field.value.trim().slice(0,120);if(!raw)return;field.value='';const command=raw.toLowerCase();if(command==='clear'){output.replaceChildren();return;}const line=document.createElement('p');line.textContent='$ '+raw;output.append(line);const result=document.createElement('p');if(command==='help')result.textContent='whoami · proyectos · redes · charlas · explorar · clear';else if(command==='whoami')result.textContent='Heber Romero Téllez / psehgaft\nArquitectura · Open source · Comunidad · Exploración';else if(shortcuts[command]){result.textContent='Abriendo /'+shortcuts[command]+'…';document.getElementById(shortcuts[command]).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}else result.textContent='Comando no encontrado. Escribe help para ver opciones.';output.append(result);while(output.children.length>30)output.firstElementChild.remove();output.scrollTop=output.scrollHeight;});

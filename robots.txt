@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://psehgaft-org.psehgaft.workers.dev/sitemap.xml

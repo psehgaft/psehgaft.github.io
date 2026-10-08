@@ -1,0 +1,5 @@
+# Publish only the website, excluding repository and build internals.
+*
+!/index.html
+!/assets/
+!/assets/**

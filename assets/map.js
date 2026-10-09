@@ -288,7 +288,8 @@ svg.addEventListener('click',function(e){
   }
   var dt=e.target.closest?e.target.closest('.district'):null;
   if(dt){ zoomTo(dt.dataset.district); return; }
-  if(e.target.id==='mapbg') zoomOut();
+  /* any other click on the map background zooms back out */
+  zoomOut();
 });
 document.querySelectorAll('.district').forEach(function(g){
   g.addEventListener('keydown',function(e){

@@ -86,8 +86,8 @@ body.radar-off #sweep,body.radar-off .blip{animation:none}
   fill:var(--red);font-family:var(--mono);font-size:15px;font-weight:700;letter-spacing:3px;
   text-shadow:0 0 12px rgba(255,49,49,.8);paint-order:stroke;stroke:#0a0a0c;stroke-width:4px;
 }
-.house{cursor:pointer;transform-box:fill-box;transform-origin:center;transition:transform .15s}
-.house:hover{transform:scale(1.35)}
+.house{cursor:pointer;transform-box:fill-box;transform-origin:center;transition:scale .15s}
+.house:hover{scale:1.35}
 .house .roof{fill:var(--red)}
 .house .walls{fill:#1c1c22;stroke:var(--red);stroke-width:1.5}
 .house .door{fill:var(--red);opacity:.85}

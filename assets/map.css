@@ -71,8 +71,8 @@ body{
 /* map */
 #mapwrap{position:fixed;inset:52px 0 104px 0;z-index:1}
 body.player-off #mapwrap{inset:52px 0 0 0}
-#map{width:100%;height:100%;display:block;cursor:grab}
-#map:active{cursor:grabbing}
+#map{width:100%;height:100%;display:block;cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24'><path d='M2.7 12.2 21.3 2.6l-6.5 18.8-3.4-7.4z' fill='%23ff3131' stroke='black' stroke-width='1'/></svg>") 21 3, auto}
+#map:active{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24'><path d='M2.7 12.2 21.3 2.6l-6.5 18.8-3.4-7.4z' fill='%23ff3131' stroke='black' stroke-width='1'/></svg>") 21 3, auto}
 .land-label{fill:var(--red);opacity:.28;font-family:var(--mono);font-size:64px;font-weight:700;letter-spacing:18px}
 #sweep{transform-origin:228px 236px;animation:sweep 14s linear infinite}
 @keyframes sweep{to{transform:rotate(360deg)}}
@@ -80,14 +80,14 @@ body.radar-off #sweep,body.radar-off .blip{animation:none}
 .blip{animation:blip 2.4s ease-in-out infinite}
 @keyframes blip{0%,100%{opacity:.25}50%{opacity:1}}
 
-.district{cursor:pointer}
+.district{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24'><path d='M2.7 12.2 21.3 2.6l-6.5 18.8-3.4-7.4z' fill='%23ff3131' stroke='black' stroke-width='1'/></svg>") 21 3, auto}
 .district .zone{transition:opacity .25s}
 .district:hover .zone{opacity:1}
 .district-label{
   fill:var(--red);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:2px;
   text-shadow:0 0 12px rgba(255,49,49,.8);paint-order:stroke;stroke:#0a0a0c;stroke-width:4px;
 }
-.house{cursor:pointer;transform-box:fill-box;transform-origin:center;transition:scale .15s}
+.house{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24'><path d='M2.7 12.2 21.3 2.6l-6.5 18.8-3.4-7.4z' fill='%23ff3131' stroke='black' stroke-width='1'/></svg>") 21 3, auto;transform-box:fill-box;transform-origin:center;transition:scale .15s}
 .house:hover{scale:1.35}
 .house circle,.house path,.house rect{fill:none;stroke:var(--red);stroke-width:2.5;transition:stroke .2s}
 .house:hover circle,.house:hover path,.house:hover rect{stroke:#fff}
@@ -95,7 +95,7 @@ body.radar-off #sweep,body.radar-off .blip{animation:none}
 .house:hover .ping{opacity:1;animation:blip 1s infinite}
 #zoommap{transition:opacity .6s}
 #land-img{transition:opacity .6s}
-.star{fill:var(--red);cursor:pointer}
+.star{fill:var(--red);cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24'><path d='M2.7 12.2 21.3 2.6l-6.5 18.8-3.4-7.4z' fill='%23ff3131' stroke='black' stroke-width='1'/></svg>") 21 3, auto}
 
 #tooltip{
   position:fixed;z-index:55;pointer-events:none;background:var(--panel);
@@ -209,3 +209,9 @@ body.player-off #terminal{bottom:60px}
   .player-tag span:last-child{display:none}
   #player-body{padding:6px 10px 8px 8px}
 }
+
+/* zoomed: hide icons of non-selected districts */
+.district .houses{transition:opacity .4s}
+body.zoomed .district:not(.active) .houses{opacity:0;pointer-events:none}
+body.zoomed .district:not(.active) .zone{opacity:.12}
+body.zoomed .district:not(.active) .district-label{opacity:.2}

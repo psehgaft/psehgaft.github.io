@@ -196,11 +196,15 @@ function zoomTo(key){
   zoomImg.setAttribute('x',tgt.x); zoomImg.setAttribute('y',tgt.y);
   zoomImg.setAttribute('width',tgt.w); zoomImg.setAttribute('height',tgt.h);
   zoomLayer.setAttribute('opacity','1'); landImg.setAttribute('opacity','0.12');
+  document.body.classList.add('zoomed');
+  document.querySelectorAll('.district').forEach(function(el){el.classList.toggle('active',el.dataset.district===key);});
   animate(); btnBack.hidden=false; openDistrict(key);
 }
 function zoomOut(){
   tgt={x:FULL.x,y:FULL.y,w:FULL.w,h:FULL.h};
   zoomLayer.setAttribute('opacity','0'); landImg.setAttribute('opacity','1');
+  document.body.classList.remove('zoomed');
+  document.querySelectorAll('.district.active').forEach(function(el){el.classList.remove('active');});
   animate(); btnBack.hidden=true; closeSidebar();
 }
 btnBack.addEventListener('click',zoomOut);

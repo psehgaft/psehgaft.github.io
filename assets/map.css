@@ -215,3 +215,5 @@ body.player-off #terminal{bottom:60px}
 body.zoomed .district:not(.active) .houses{opacity:0;pointer-events:none}
 body.zoomed .district:not(.active) .zone{opacity:.12}
 body.zoomed .district:not(.active) .district-label{opacity:.2}
+
+a.hud-btn{text-decoration:none;display:inline-flex;align-items:center;gap:6px}

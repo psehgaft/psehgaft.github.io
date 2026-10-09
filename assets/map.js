@@ -14,7 +14,7 @@ var STREETMAPS={
 /* ---------------- i18n ---------------- */
 var STR={
 es:{
-  hudTitle:'PSEHGAFT // OPEN WORLD', back:'Volver al mapa', radar:'Radar', terminal:'Terminal',
+  hudTitle:'PSEHGAFT // OPEN WORLD', back:'Volver al mapa', home:'Inicio', radar:'Radar', terminal:'Terminal',
   chatTitle:'CHAT DEL JUEGO', chatPlaceholder:'Escribe tu mensaje…', chatSend:'Enviar',
   srv1:'[SERVIDOR] Conectado como invitado_', srv2:'[SERVIDOR] Escribe para enviar un DM a psehgaft',
   usa:'USA', mexico:'MÉXICO',
@@ -41,7 +41,7 @@ es:{
   tUnknown:function(c){return 'comando no encontrado: '+c+' — prueba "help"';}
 },
 en:{
-  hudTitle:'PSEHGAFT // OPEN WORLD', back:'Back to map', radar:'Radar', terminal:'Terminal',
+  hudTitle:'PSEHGAFT // OPEN WORLD', back:'Back to map', home:'Home', radar:'Radar', terminal:'Terminal',
   chatTitle:'GAME CHAT', chatPlaceholder:'Type your message…', chatSend:'Send',
   srv1:'[SERVER] Connected as guest_', srv2:'[SERVER] Type to send a DM to psehgaft',
   usa:'USA', mexico:'MEXICO',

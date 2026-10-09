@@ -164,6 +164,19 @@
     };
     var coords={repos:{x:205,y:275,w:260,h:230},social:{x:545,y:255,w:270,h:235},hq:{x:345,y:350,w:250,h:220},talks:{x:330,y:420,w:250,h:220},learn:{x:385,y:485,w:270,h:185}},full={x:0,y:0,w:1000,h:670};
     var districtMaps={repos:{src:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAMklEQVR42u3OwQAAQAgAsDqEBPJXSOkkwuizESyn+sehF8cEBAQEBAQEBAQEBAQEBAQWq8oCFv1xav0AAAAASUVORK5CYII=',place:{es:'Mapa de laboratorio · Boston',en:'Lab map · Boston',fr:'Carte du labo · Boston',de:'Laborkarte · Boston'}},social:{src:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAMklEQVR42u3OwQAAQAgAsDqEBPJXSOkkwuizESyn+sehF8cEBAQEBAQEBAQEBAQEBAQWq8oCFv1xav0AAAAASUVORK5CYII=',place:{es:'Mapa de conexiones · Boston',en:'Connections map · Boston',fr:'Carte des connexions · Boston',de:'Netzwerkkarte · Boston'}},hq:{src:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAMklEQVR42u3OwQAAQAgAsDqEBPJXSOkkwuizESyn+sehF8cEBAQEBAQEBAQEBAQEBAQWq8oCFv1xav0AAAAASUVORK5CYII=',place:{es:'Mapa del cuartel · Ciudad de México',en:'Headquarters map · Mexico City',fr:'Carte du QG · Mexico',de:'Hauptquartier-Karte · Mexiko-Stadt'}},talks:{src:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAMklEQVR42u3OwQAAQAgAsDqEBPJXSOkkwuizESyn+sehF8cEBAQEBAQEBAQEBAQEBAQWq8oCFv1xav0AAAAASUVORK5CYII=',place:{es:'Mapa de escenarios · Puebla',en:'Stages map · Puebla',fr:'Carte des scènes · Puebla',de:'Bühnenkarte · Puebla'}},learn:{src:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAMklEQVR42u3OwQAAQAgAsDqEBPJXSOkkwuizESyn+sehF8cEBAQEBAQEBAQEBAQEBAQWq8oCFv1xav0AAAAASUVORK5CYII=',place:{es:'Mapa de entrenamiento · Ciudad de México',en:'Training map · Mexico City',fr:'Carte d’entraînement · Mexico',de:'Trainingskarte · Mexiko-Stadt'}}};
+    // Real street maps: base64 JPEGs stored as text assets, swapped in when loaded.
+    // (Red placeholders stay as fallback until then.)
+    (function(){
+      var files={boston:'assets/map-boston.b64',cdmx:'assets/map-cdmx.b64',puebla:'assets/map-puebla.b64'};
+      var mapFor={repos:'boston',social:'boston',hq:'cdmx',talks:'puebla',learn:'cdmx'};
+      Object.keys(files).forEach(function(k){
+        fetch(files[k]).then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(b64){
+          var uri='data:image/jpeg;base64,'+b64.trim();
+          Object.keys(mapFor).forEach(function(dk){if(mapFor[dk]===k)districtMaps[dk].src=uri;});
+          if(active&&mapFor[active]===k){document.getElementById('zoomMapImage').src=uri;}
+        }).catch(function(){});
+      });
+    })();
     var poiPos=[[14,24],[34,17],[54,31],[22,51],[47,56],[12,72],[58,73],[34,78],[8,42],[62,48],[42,39]];
     var svg=document.getElementById('world'), side=document.getElementById('side'), sideBody=document.getElementById('sideBody'), sideTitle=document.getElementById('sideTitle'), sideDesc=document.getElementById('sideDesc'), sideKicker=document.getElementById('sideKicker'), zoomMap=document.getElementById('zoomMap');
     function escapeHtml(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}

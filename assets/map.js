@@ -67,14 +67,14 @@ function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp
 /* ---------------- data ---------------- */
 var DEVCONF26='https://pretalx.devconf.info/devconf-us-2026/speaker/DCTSUB/';
 var DISTRICTS={
-repos:{cx:235,cy:185,zoom:400,r:72,label:'d_repos',desc:'d_repos_desc',items:[
+repos:{cx:170,cy:300,zoom:190,r:42,label:'d_repos',desc:'d_repos_desc',items:[
   {name:'ocp-ansible-agent-installer',owner:'psehgaft',url:'https://github.com/psehgaft/ocp-ansible-agent-installer',es:'Instalación de OpenShift con Ansible',en:'OpenShift installation with Ansible'},
   {name:'automation_governance_model',owner:'Open-Industries',url:'https://github.com/Open-Industries/automation_governance_model',es:'Gobierno de automatización: roles y prácticas',en:'Automation governance: roles and practices'},
   {name:'open-ecosystem-services',owner:'Open-Industries',url:'https://github.com/Open-Industries/open-ecosystem-services',es:'Servicios y ecosistemas abiertos',en:'Open services and ecosystems'},
   {name:'openshift-quarkus-game',owner:'psehgaft',url:'https://github.com/psehgaft/openshift-quarkus-game',es:'Aprender jugando con Quarkus',en:'Learning by playing with Quarkus'},
   {name:'catálogo',catalog:true,es:'Catálogo completo: busca entre todos los repositorios',en:'Full catalog: search across every repository'}
 ]},
-social:{cx:765,cy:185,zoom:420,r:80,label:'d_social',desc:'d_social_desc',items:[
+social:{cx:340,cy:295,zoom:200,r:46,label:'d_social',desc:'d_social_desc',items:[
   {name:'LinkedIn',url:'https://www.linkedin.com/in/psehgaft/',es:'Trayectoria profesional',en:'Professional journey'},
   {name:'GitHub',url:'https://github.com/psehgaft',es:'Código y laboratorios',en:'Code and labs'},
   {name:'Instagram',url:'https://www.instagram.com/psehgaft/',es:'Diario visual',en:'Visual diary'},
@@ -87,11 +87,11 @@ social:{cx:765,cy:185,zoom:420,r:80,label:'d_social',desc:'d_social_desc',items:
   {name:'Blogger',url:'https://psehgaft.blogspot.com/',es:'Escritos y memoria',en:'Writings and memory'},
   {name:'Credly',url:'https://www.credly.com/users/psehgaft/badges',es:'Certificaciones',en:'Certifications'}
 ]},
-hq:{cx:500,cy:348,zoom:340,r:62,label:'d_hq',desc:'d_hq_desc',items:[
+hq:{cx:255,cy:348,zoom:170,r:38,label:'d_hq',desc:'d_hq_desc',items:[
   {name:'psehgaft@psehgaft.org',url:'mailto:psehgaft@psehgaft.org?subject=Hola%20desde%20el%20mapa',email:true,es:'Escríbeme un correo directo',en:'Send me a direct email'},
   {name:'chat',chat:true,es:'Chat del juego: envíame un DM',en:'Game chat: send me a DM'}
 ]},
-talks:{cx:505,cy:478,zoom:400,r:72,label:'d_talks',desc:'d_talks_desc',items:[
+talks:{cx:235,cy:392,zoom:180,r:40,label:'d_talks',desc:'d_talks_desc',items:[
   {name:'Your Platform Team Is Not a Ticket Queue',tag:'DEVCONF.US 2026',url:DEVCONF26,es:'Plataformas como producto y autoservicio',en:'Platforms as product and self-service'},
   {name:'GPUs, DRA, and Smarter Scheduling for AI',tag:'DEVCONF.US 2026',url:DEVCONF26,es:'Kubernetes para cargas de IA aceleradas',en:'Kubernetes for accelerated AI workloads'},
   {name:'KubeVirt Without Fear',tag:'DEVCONF.US 2026',url:DEVCONF26,es:'VMs y contenedores en una plataforma',en:'VMs and containers on one platform'},
@@ -101,7 +101,7 @@ talks:{cx:505,cy:478,zoom:400,r:72,label:'d_talks',desc:'d_talks_desc',items:[
   {name:'YouTube',tag:'CANAL',url:'https://www.youtube.com/@Psehgaft/videos',es:'Charlas y sesiones en video',en:'Talks and sessions on video'},
   {name:'Blog',tag:'BLOGGER',url:'https://psehgaft.blogspot.com/',es:'Escritos y memoria',en:'Writings and memory'}
 ]},
-learn:{cx:500,cy:600,zoom:360,r:66,label:'d_learn',desc:'d_learn_desc',items:[
+learn:{cx:242,cy:440,zoom:170,r:38,label:'d_learn',desc:'d_learn_desc',items:[
   {name:'Credly · DO316',url:'https://www.credly.com/users/psehgaft/badges',es:'Insignia: OpenShift Virtualization (DO316)',en:'Badge: OpenShift Virtualization (DO316)'},
   {name:'OpenCommunity',url:'https://github.com/psehgaft/OpenCommunity',es:'Comunidad y aprendizaje abierto',en:'Open learning community'},
   {name:'Lab notes',url:'https://psehgaft.blogspot.com/',es:'Notas desde el laboratorio',en:'Notes from the lab'},
@@ -158,7 +158,7 @@ function itemLabel(key,i){
 }
 
 /* ---------------- zoom ---------------- */
-var FULL={x:0,y:0,w:1000,h:720};
+var FULL={x:0,y:0,w:457,h:472};
 var cur={x:0,y:0,w:1000,h:720}, tgt={x:0,y:0,w:1000,h:720}, raf=null;
 function applyVB(){svg.setAttribute('viewBox',cur.x+' '+cur.y+' '+cur.w+' '+cur.h); updateMini();}
 function animate(){
@@ -175,7 +175,7 @@ function animate(){
 }
 var btnBack=document.getElementById('btn-back');
 function zoomTo(key){
-  var d=DISTRICTS[key], h=d.zoom*0.72;
+  var d=DISTRICTS[key], h=d.zoom*1.03;
   tgt={x:d.cx-d.zoom/2,y:d.cy-h/2,w:d.zoom,h:h};
   animate(); btnBack.hidden=false; openDistrict(key);
 }
@@ -280,7 +280,7 @@ svg.addEventListener('click',function(e){
   if(h){
     var key=h.dataset.district, idx=parseInt(h.dataset.idx,10);
     var d=DISTRICTS[key];
-    var hh=d.zoom*0.72;
+    var hh=d.zoom*1.03;
     tgt={x:d.cx-d.zoom/2,y:d.cy-hh/2,w:d.zoom,h:hh};
     animate(); btnBack.hidden=false;
     sidebarState={key:key,idx:idx}; renderSidebar(); sidebar.classList.add('open');
@@ -300,18 +300,12 @@ document.querySelectorAll('.district').forEach(function(g){
 
 /* ---------------- minimap ---------------- */
 (function(){
-  var ml=document.getElementById('mini-land');
-  ['land-usa','land-mx','land-baja','land-yuc'].forEach(function(id){
-    var src=document.getElementById(id); if(!src) return;
-    var p=document.createElementNS(NS,'path');
-    p.setAttribute('d',src.getAttribute('d'));
-    ml.appendChild(p);
-  });
+  var md=document.getElementById('mini-dots');
   Object.keys(DISTRICTS).forEach(function(k){
     var c=document.createElementNS(NS,'circle');
     c.setAttribute('cx',DISTRICTS[k].cx); c.setAttribute('cy',DISTRICTS[k].cy);
-    c.setAttribute('r',14); c.setAttribute('fill','#ff3131');
-    ml.appendChild(c);
+    c.setAttribute('r',7); c.setAttribute('fill','#ff3131');
+    md.appendChild(c);
   });
 })();
 function updateMini(){
@@ -377,6 +371,13 @@ termForm.addEventListener('submit',function(e){
   else if(c==='lang'){setLang(lang==='es'?'en':'es'); tprintln(T('tLang'));}
   else if(c==='clear') termOut.innerHTML='';
   else tprintln(T('tUnknown')(c));
+});
+
+/* ---------------- player ---------------- */
+var player=document.getElementById('player');
+document.getElementById('player-toggle').addEventListener('click',function(){
+  var hidden=player.classList.toggle('hidden');
+  document.body.classList.toggle('player-off',hidden);
 });
 
 /* ---------------- init ---------------- */

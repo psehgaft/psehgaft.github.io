@@ -89,11 +89,12 @@ body.radar-off #sweep,body.radar-off .blip{animation:none}
 }
 .house{cursor:pointer;transform-box:fill-box;transform-origin:center;transition:scale .15s}
 .house:hover{scale:1.35}
-.house .roof{fill:var(--red)}
-.house .walls{fill:#1c1c22;stroke:var(--red);stroke-width:1.5}
-.house .door{fill:var(--red);opacity:.85}
-.house .ping{fill:#fff;opacity:0}
+.house circle,.house path,.house rect{fill:none;stroke:var(--red);stroke-width:2.5;transition:stroke .2s}
+.house:hover circle,.house:hover path,.house:hover rect{stroke:#fff}
+.house .ping{fill:#fff;stroke:none;opacity:0}
 .house:hover .ping{opacity:1;animation:blip 1s infinite}
+#zoommap{transition:opacity .6s}
+#land-img{transition:opacity .6s}
 .star{fill:var(--red);cursor:pointer}
 
 #tooltip{

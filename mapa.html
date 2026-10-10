@@ -88,6 +88,8 @@
 .wa-modal-name{width:100%;box-sizing:border-box;background:#111;border:1px solid var(--line);color:#e5e5e5;font:12px ui-monospace,monospace;padding:10px;margin:0 0 12px}
 .send-channels{margin-bottom:12px}
 .send-channels .chat-btn{padding:12px 4px}
+.wall-msg{font:12px/1.5 ui-monospace,monospace;color:#c9c9c9;margin:4px 0;overflow-wrap:anywhere}
+.wall-msg strong{color:var(--red)}
 </style>
 </head>
 <body>
@@ -166,7 +168,7 @@
             <div class="muro-list" id="muroList"><p class="muro-loading" data-t="gbLoading">Cargando mensajes…</p></div>
             <form class="muro-form" id="muroForm" target="muroIframe" method="POST" action="https://script.google.com/macros/s/AKfycbyfNhTkKvXNhn_MgNM_435qixUhbdv5oTG_8CJVu-CVX7dG0s1COV9OzI0bfmXVBAYQVA/exec">
               <input id="muroName" name="nombre" maxlength="40" autocomplete="off" data-ph="chatNamePh" placeholder="Tu nombre…" aria-label="Nombre">
-              <input id="muroMsg" name="mensaje" maxlength="500" autocomplete="off" data-ph="gbMsgPh" placeholder="Escribe en el muro…" aria-label="Mensaje">
+              <input type="hidden" id="muroIp" name="ip" value=""><input id="muroMsg" name="mensaje" maxlength="500" autocomplete="off" data-ph="gbMsgPh" placeholder="Escribe en el muro…" aria-label="Mensaje">
               <button class="wa-modal-send" type="submit" data-t="gbSend">PUBLICAR</button>
             </form>
             <iframe name="muroIframe" class="muro-iframe" title="envio" aria-hidden="true" tabindex="-1"></iframe>
@@ -472,11 +474,17 @@ document.getElementById('sendWa').onclick=function(){var x=sendText();document.g
 document.getElementById('sendTg').onclick=function(){var x=sendText();document.getElementById('sendModal').classList.add('hidden');logUserMsg(x);copyText(x);openExternal('https://t.me/psehgaft');document.getElementById('chatInput').value=''};
 document.getElementById('sendGb').onclick=function(){var n=document.getElementById('sendName').value.trim(),m=document.getElementById('sendModalMsg').textContent;document.getElementById('sendModal').classList.add('hidden');logUserMsg((n?n+': ':'')+m);document.getElementById('chatInput').value='';document.getElementById('muroModal').classList.remove('hidden');if(n)document.getElementById('muroName').value=n;document.getElementById('muroMsg').value=m;loadMuro()};
 var MURO_URL='https://script.google.com/macros/s/AKfycbyfNhTkKvXNhn_MgNM_435qixUhbdv5oTG_8CJVu-CVX7dG0s1COV9OzI0bfmXVBAYQVA/exec';
+var VISITOR_IP='';
+(function(){try{fetch('https://api.ipify.org?format=json').then(function(r){return r.json()}).then(function(d){if(d&&d.ip){VISITOR_IP=d.ip;var f=document.getElementById('muroIp');if(f)f.value=d.ip}}).catch(function(){})}catch(e){}})();
+function renderWallInChat(data){var log=document.getElementById('chatLog');if(!log||!data||!data.length)return;var sep=document.createElement('p');sep.className='server wall-sep';sep.textContent='[SERVIDOR] Últimos mensajes del muro_';log.appendChild(sep);data.slice(0,5).forEach(function(it){var p=document.createElement('p');p.className='wall-msg';var nm=document.createElement('strong');nm.textContent=(it.n||'Anónimo')+': ';p.appendChild(nm);p.appendChild(document.createTextNode(it.m||''));log.appendChild(p)})}
+var _muroCb=window.muroCb;
+window.muroCb=function(data){_muroCb(data);var log=document.getElementById('chatLog');if(log){var olds=log.querySelectorAll('.wall-msg,.wall-sep');for(var i=0;i<olds.length;i++)olds[i].parentNode.removeChild(olds[i]);}renderWallInChat(data)};
 window.muroCb=function(data){var list=document.getElementById('muroList');list.innerHTML='';if(!data||!data.length){var p=document.createElement('p');p.className='muro-empty';p.textContent=t('gbEmpty');list.appendChild(p);return}data.forEach(function(it){var d=document.createElement('div');d.className='muro-item';var hd=document.createElement('p');hd.className='muro-head';var nm=document.createElement('strong');nm.textContent=it.n||'Anónimo';var ft=document.createElement('span');ft.textContent=' · '+(it.f||'');hd.appendChild(nm);hd.appendChild(ft);var tx=document.createElement('p');tx.className='muro-text';tx.textContent=it.m||'';d.appendChild(hd);d.appendChild(tx);list.appendChild(d)})};
 function loadMuro(){var old=document.getElementById('muroJsonp');if(old&&old.parentNode)old.parentNode.removeChild(old);var s=document.createElement('script');s.id='muroJsonp';s.src=MURO_URL+'?callback=muroCb&_='+Date.now();s.onerror=function(){var list=document.getElementById('muroList');list.innerHTML='';var p=document.createElement('p');p.className='muro-empty';p.textContent=t('gbEmpty');list.appendChild(p)};document.head.appendChild(s)}
 
 document.getElementById('muroForm').onsubmit=function(){var mg=document.getElementById('muroMsg').value.trim();if(!mg)return false;setTimeout(function(){document.getElementById('muroMsg').value='';loadMuro()},2500);return true};
 document.getElementById('muroClose').onclick=function(){document.getElementById('muroModal').classList.add('hidden')};
+setTimeout(function(){try{loadMuro()}catch(e){}},1500);
 mit=function(e){e.preventDefault();var msg=document.getElementById('chatInput').value.trim();if(!msg)return;document.getElementById('sendModalMsg').textContent=msg;document.getElementById('sendModal').classList.remove('hidden')};
 
 

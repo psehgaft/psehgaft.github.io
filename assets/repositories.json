@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09",
+ "updated": "2026-10-10",
  "repositories": [
   {
    "name": ".github",
@@ -1165,6 +1165,11 @@
    "name": "git-from-scratch-showroom",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/git-from-scratch-showroom"
+  },
+  {
+   "name": "GitHub-Achievements",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/GitHub-Achievements"
   },
   {
    "name": "github-mcp-server",

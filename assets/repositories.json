@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10",
+ "updated": "2026-10-11",
  "repositories": [
   {
    "name": ".github",
@@ -2700,6 +2700,11 @@
    "name": "servicemesh-3scale-demo",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/servicemesh-3scale-demo"
+  },
+  {
+   "name": "showroom",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/showroom"
   },
   {
    "name": "showroom_osp-on-ocp-day2",

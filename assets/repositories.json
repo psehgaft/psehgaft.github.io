@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12",
+ "updated": "2026-10-13",
  "repositories": [
   {
    "name": ".github",
@@ -2097,6 +2097,11 @@
    "url": "https://github.com/psehgaft/OpenDemoDayAnsible"
   },
   {
+   "name": "openGym",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/openGym"
+  },
+  {
    "name": "OpenShift",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/OpenShift"
@@ -2380,6 +2385,11 @@
    "name": "probador-replicacion-sesiones",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/probador-replicacion-sesiones"
+  },
+  {
+   "name": "project_psehgaft_gym",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/project_psehgaft_gym"
   },
   {
    "name": "provision_proxmox",
@@ -3055,6 +3065,11 @@
    "name": "ubiquitous-journey",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/ubiquitous-journey"
+  },
+  {
+   "name": "unifi-ddns",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/unifi-ddns"
   },
   {
    "name": "UnifiedWorkloadMigration-OCP",

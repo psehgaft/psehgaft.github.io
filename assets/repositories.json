@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15",
+ "updated": "2026-10-20",
  "repositories": [
   {
    "name": ".github",
@@ -1960,6 +1960,11 @@
    "name": "open-ecosystem-services",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/open-ecosystem-services"
+  },
+  {
+   "name": "open-ecosystem-services",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-ecosystem-services"
   },
   {
    "name": "open-education",

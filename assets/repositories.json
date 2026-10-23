@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21",
+ "updated": "2026-10-23",
  "repositories": [
   {
    "name": ".github",
@@ -15,6 +15,11 @@
    "name": ".Net_Notas",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/.Net_Notas"
+  },
+  {
+   "name": "3scale-amp-openshift-templates",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/3scale-amp-openshift-templates"
   },
   {
    "name": "3scale-operator",
@@ -1057,6 +1062,11 @@
    "url": "https://github.com/psehgaft/Ejemplo-web-.Net---SIPVEP"
   },
   {
+   "name": "enablement-docs",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/enablement-docs"
+  },
+  {
    "name": "enablement-framework",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/enablement-framework"
@@ -1547,6 +1557,11 @@
    "url": "https://github.com/psehgaft/log4shell-detector"
   },
   {
+   "name": "lorawan-stack",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/lorawan-stack"
+  },
+  {
    "name": "machine-api-operator",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/machine-api-operator"
@@ -1725,6 +1740,11 @@
    "name": "ng-dynamic-forms",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/ng-dynamic-forms"
+  },
+  {
+   "name": "ninja-board",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/ninja-board"
   },
   {
    "name": "ninja-points",

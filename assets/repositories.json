@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23",
+ "updated": "2026-10-25",
  "repositories": [
   {
    "name": ".github",
@@ -15,6 +15,11 @@
    "name": ".Net_Notas",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/.Net_Notas"
+  },
+  {
+   "name": "2026website",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/2026website"
   },
   {
    "name": "3scale-amp-openshift-templates",
@@ -2877,6 +2882,11 @@
    "url": "https://github.com/psehgaft/solution-pattern-interconnect-virt"
   },
   {
+   "name": "solution-pattern-kubevirt-migration",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/solution-pattern-kubevirt-migration"
+  },
+  {
    "name": "solution-pattern-modernization-cdc",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/solution-pattern-modernization-cdc"
@@ -3095,6 +3105,11 @@
    "name": "unifi-ddns",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/unifi-ddns"
+  },
+  {
+   "name": "UnifiedWorkloadMigration-Kubevirt",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/UnifiedWorkloadMigration-Kubevirt"
   },
   {
    "name": "UnifiedWorkloadMigration-OCP",

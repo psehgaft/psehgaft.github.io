@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27",
+ "updated": "2026-10-28",
  "repositories": [
   {
    "name": ".github",
@@ -3175,6 +3175,11 @@
    "name": "Vmax-XRay",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/Vmax-XRay"
+  },
+  {
+   "name": "vmware-ocpv",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/vmware-ocpv"
   },
   {
    "name": "VMwareCertificates",

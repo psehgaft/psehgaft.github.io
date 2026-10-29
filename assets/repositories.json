@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28",
+ "updated": "2026-10-29",
  "repositories": [
   {
    "name": ".github",
@@ -2150,6 +2150,11 @@
    "name": "openshift-baremetal",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/openshift-baremetal"
+  },
+  {
+   "name": "openshift-baremetal-production-quality",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/openshift-baremetal-production-quality"
   },
   {
    "name": "openshift-bm",

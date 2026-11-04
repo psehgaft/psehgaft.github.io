@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01",
+ "updated": "2026-11-04",
  "repositories": [
   {
    "name": ".github",
@@ -575,6 +575,11 @@
    "name": "bropages",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/bropages"
+  },
+  {
+   "name": "buap_servicio_social",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/buap_servicio_social"
   },
   {
    "name": "businessautomation-cop",
@@ -1517,6 +1522,11 @@
    "url": "https://github.com/psehgaft/langgraph"
   },
   {
+   "name": "Learning-Kubernetes-Security-Second-Edition",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/Learning-Kubernetes-Security-Second-Edition"
+  },
+  {
    "name": "learnwebservices",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/learnwebservices"
@@ -1755,6 +1765,11 @@
    "name": "ninja-points",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/ninja-points"
+  },
+  {
+   "name": "notebooks-npl",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/notebooks-npl"
   },
   {
    "name": "Notes_crt_ad183",
@@ -2577,6 +2592,11 @@
    "url": "https://github.com/psehgaft/rh-cert-map"
   },
   {
+   "name": "rh-hackathon-griot-and-grits",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/rh-hackathon-griot-and-grits"
+  },
+  {
    "name": "rh-helm-charts",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/rh-helm-charts"
@@ -2642,6 +2662,11 @@
    "url": "https://github.com/psehgaft/rhel-sca-subscriptionmanager"
   },
   {
+   "name": "rhel_control_tower",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/rhel_control_tower"
+  },
+  {
    "name": "rhelai-dev-preview",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/rhelai-dev-preview"
@@ -2680,6 +2705,16 @@
    "name": "runc",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/runc"
+  },
+  {
+   "name": "SafeShift",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/SafeShift"
+  },
+  {
+   "name": "safeshift-doc-gen-release",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/safeshift-doc-gen-release"
   },
   {
    "name": "sat6_healthCheck",
@@ -3120,6 +3155,11 @@
    "name": "UnifiedWorkloadMigration-OCP",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/UnifiedWorkloadMigration-OCP"
+  },
+  {
+   "name": "unify-KubernetesKubevit-workflows-TXLF2026",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/unify-KubernetesKubevit-workflows-TXLF2026"
   },
   {
    "name": "uor-client-go",

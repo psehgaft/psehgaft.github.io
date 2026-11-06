@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-06",
  "repositories": [
   {
    "name": ".github",
@@ -1420,6 +1420,11 @@
    "name": "istio.io",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/istio.io"
+  },
+  {
+   "name": "java-agent-software-factory",
+   "owner": "Open-Industries",
+   "url": "https://github.com/Open-Industries/java-agent-software-factory"
   },
   {
    "name": "JavaScript-Examples",

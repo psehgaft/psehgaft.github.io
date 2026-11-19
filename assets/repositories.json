@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14",
+ "updated": "2026-11-19",
  "repositories": [
   {
    "name": ".github",
@@ -550,6 +550,11 @@
    "name": "BancoHRT",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/BancoHRT"
+  },
+  {
+   "name": "biby-motos.io",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/biby-motos.io"
   },
   {
    "name": "bifrost",
@@ -1162,6 +1167,11 @@
    "url": "https://github.com/psehgaft/fortipam-Ansible"
   },
   {
+   "name": "frankjunker87-arch.github.io",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/frankjunker87-arch.github.io"
+  },
+  {
    "name": "Fraud-Detection-with-Business-Workflows-Tutorial",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/Fraud-Detection-with-Business-Workflows-Tutorial"
@@ -1210,6 +1220,11 @@
    "name": "github-repository-contribution-stats",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/github-repository-contribution-stats"
+  },
+  {
+   "name": "github-tecgirl",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/github-tecgirl"
   },
   {
    "name": "github.io",
@@ -1372,6 +1387,16 @@
    "url": "https://github.com/psehgaft/infra-ansible"
   },
   {
+   "name": "insta-followers-extension",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/insta-followers-extension"
+  },
+  {
+   "name": "insta-followers.github.io",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/insta-followers.github.io"
+  },
+  {
    "name": "installer",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/installer"
@@ -1427,6 +1452,21 @@
    "url": "https://github.com/psehgaft/istio.io"
   },
   {
+   "name": "jaquisalinasmodelos.github.io",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/jaquisalinasmodelos.github.io"
+  },
+  {
+   "name": "jaquisalinasseguros.github.io",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/jaquisalinasseguros.github.io"
+  },
+  {
+   "name": "jaquisalinasterapeuta.github.io",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/jaquisalinasterapeuta.github.io"
+  },
+  {
    "name": "java-agent-software-factory",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/java-agent-software-factory"
@@ -1477,6 +1517,16 @@
    "url": "https://github.com/psehgaft/katacoda-scenarios"
   },
   {
+   "name": "keysi-kunz",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/keysi-kunz"
+  },
+  {
+   "name": "keysi.github.io",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/keysi.github.io"
+  },
+  {
    "name": "krkn",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/krkn"
@@ -1515,6 +1565,11 @@
    "name": "la-p-pe",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/la-p-pe"
+  },
+  {
+   "name": "la-pape-tools",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/la-pape-tools"
   },
   {
    "name": "lab-ossm",
@@ -1675,6 +1730,11 @@
    "name": "microshift",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/microshift"
+  },
+  {
+   "name": "Microsoft-Activation-Scripts",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/Microsoft-Activation-Scripts"
   },
   {
    "name": "mineOps",
@@ -1952,6 +2012,11 @@
    "url": "https://github.com/psehgaft/odyssey-deep-fried-learning"
   },
   {
+   "name": "Office365-Validator",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/Office365-Validator"
+  },
+  {
    "name": "ohmyzsh",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/ohmyzsh"
@@ -1987,9 +2052,19 @@
    "url": "https://github.com/Open-Industries/open-agriculture"
   },
   {
+   "name": "open-agriculture",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-agriculture"
+  },
+  {
    "name": "open-automotive",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/open-automotive"
+  },
+  {
+   "name": "open-automotive",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-automotive"
   },
   {
    "name": "open-banking",
@@ -1997,14 +2072,29 @@
    "url": "https://github.com/Open-Industries/open-banking"
   },
   {
+   "name": "open-banking",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-banking"
+  },
+  {
    "name": "open-eco",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/open-eco"
   },
   {
+   "name": "open-eco",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-eco"
+  },
+  {
    "name": "open-ecommerce",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/open-ecommerce"
+  },
+  {
+   "name": "open-ecommerce",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-ecommerce"
   },
   {
    "name": "open-ecosystem-services",
@@ -2027,14 +2117,29 @@
    "url": "https://github.com/psehgaft/open-education"
   },
   {
+   "name": "open-education-tecgirl",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-education-tecgirl"
+  },
+  {
    "name": "open-energy",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/open-energy"
   },
   {
+   "name": "open-energy",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-energy"
+  },
+  {
    "name": "open-eretail",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/open-eretail"
+  },
+  {
+   "name": "open-eretail",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-eretail"
   },
   {
    "name": "Open-FaaS-ecosistemas-de-servicios",
@@ -2047,9 +2152,19 @@
    "url": "https://github.com/Open-Industries/open-government"
   },
   {
+   "name": "open-government",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-government"
+  },
+  {
    "name": "open-healthcare-insurance",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/open-healthcare-insurance"
+  },
+  {
+   "name": "open-healthcare-insurance",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-healthcare-insurance"
   },
   {
    "name": "open-infrastructure-construction",
@@ -2057,9 +2172,19 @@
    "url": "https://github.com/Open-Industries/open-infrastructure-construction"
   },
   {
+   "name": "open-infrastructure-construction",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-infrastructure-construction"
+  },
+  {
    "name": "open-it-ai",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/open-it-ai"
+  },
+  {
+   "name": "open-it-ai",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-it-ai"
   },
   {
    "name": "open-knowledge-cop",
@@ -2082,6 +2207,11 @@
    "url": "https://github.com/Open-Industries/open-legal-services"
   },
   {
+   "name": "open-legal-services",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-legal-services"
+  },
+  {
    "name": "open-liberty",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/open-liberty"
@@ -2092,9 +2222,19 @@
    "url": "https://github.com/Open-Industries/open-manufacturing"
   },
   {
+   "name": "open-manufacturing",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-manufacturing"
+  },
+  {
    "name": "open-media-entertainment",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/open-media-entertainment"
+  },
+  {
+   "name": "open-media-entertainment",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-media-entertainment"
   },
   {
    "name": "open-organization.github.io",
@@ -2107,6 +2247,11 @@
    "url": "https://github.com/Open-Industries/open-pharmaceutical"
   },
   {
+   "name": "open-pharmaceutical",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-pharmaceutical"
+  },
+  {
    "name": "open-policy-agent-k8s",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/open-policy-agent-k8s"
@@ -2117,9 +2262,19 @@
    "url": "https://github.com/Open-Industries/open-real-estate"
   },
   {
+   "name": "open-real-estate",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-real-estate"
+  },
+  {
    "name": "open-telecommunications",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/open-telecommunications"
+  },
+  {
+   "name": "open-telecommunications",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-telecommunications"
   },
   {
    "name": "open-transportation-logistics",
@@ -2127,9 +2282,19 @@
    "url": "https://github.com/Open-Industries/open-transportation-logistics"
   },
   {
+   "name": "open-transportation-logistics",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-transportation-logistics"
+  },
+  {
    "name": "open-travel",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/open-travel"
+  },
+  {
+   "name": "open-travel",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-travel"
   },
   {
    "name": "openapi-generator",
@@ -2837,6 +3002,11 @@
    "url": "https://github.com/psehgaft/skupper-operator"
   },
   {
+   "name": "smarttwin.github.io",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/smarttwin.github.io"
+  },
+  {
    "name": "soap-rest-bridge",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/soap-rest-bridge"
@@ -3092,6 +3262,16 @@
    "url": "https://github.com/psehgaft/Team-Coaching"
   },
   {
+   "name": "tec-girl",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/tec-girl"
+  },
+  {
+   "name": "tec-girl.github.io",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/tec-girl.github.io"
+  },
+  {
    "name": "technical-writing-course-brno",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/technical-writing-course-brno"
@@ -3122,6 +3302,11 @@
    "url": "https://github.com/psehgaft/test-trove-git-demo"
   },
   {
+   "name": "TGV-ReportForge",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/TGV-ReportForge"
+  },
+  {
    "name": "thanos",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/thanos"
@@ -3130,6 +3315,11 @@
    "name": "training",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/training"
+  },
+  {
+   "name": "tramitanet-la-pape",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/tramitanet-la-pape"
   },
   {
    "name": "trino-operator",
@@ -3320,6 +3510,11 @@
    "name": "XC475-GymTutor",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/XC475-GymTutor"
+  },
+  {
+   "name": "ximena_grace.github.io",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/ximena_grace.github.io"
   },
   {
    "name": "XMLFilterTest",

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "repositories": [
   {
    "name": ".github",
@@ -1265,6 +1265,11 @@
    "name": "google-authenticator-exporter",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/google-authenticator-exporter"
+  },
+  {
+   "name": "google_drive_auditor",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/google_drive_auditor"
   },
   {
    "name": "governance",

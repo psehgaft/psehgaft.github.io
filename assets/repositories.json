@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26",
+ "updated": "2026-11-28",
  "repositories": [
   {
    "name": ".github",
@@ -460,6 +460,11 @@
    "name": "automation_governance_model",
    "owner": "Open-Industries",
    "url": "https://github.com/Open-Industries/automation_governance_model"
+  },
+  {
+   "name": "automation_governance_model",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/automation_governance_model"
   },
   {
    "name": "awards",
@@ -1142,6 +1147,11 @@
    "url": "https://github.com/psehgaft/fedora-containers-lab-examples"
   },
   {
+   "name": "flayer-maker",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/flayer-maker"
+  },
+  {
    "name": "fluentd-kubernetes-sumologic",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/fluentd-kubernetes-sumologic"
@@ -1165,6 +1175,11 @@
    "name": "fortipam-Ansible",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/fortipam-Ansible"
+  },
+  {
+   "name": "frankjunker87-arch",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/frankjunker87-arch"
   },
   {
    "name": "frankjunker87-arch.github.io",
@@ -1290,6 +1305,11 @@
    "name": "group-sync-operator",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/group-sync-operator"
+  },
+  {
+   "name": "guia-ceneval-exani-ii",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/guia-ceneval-exani-ii"
   },
   {
    "name": "guias_studio_buap_2023",
@@ -2080,6 +2100,11 @@
    "name": "open-banking",
    "owner": "psehgaft",
    "url": "https://github.com/psehgaft/open-banking"
+  },
+  {
+   "name": "open-demo-day-template",
+   "owner": "psehgaft",
+   "url": "https://github.com/psehgaft/open-demo-day-template"
   },
   {
    "name": "open-eco",
